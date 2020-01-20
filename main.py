@@ -89,6 +89,12 @@ def main():
 #        zh_diff_props_file_content += zh_value_inputed
         zh_diff_props_file_content += zh_value
         zh_diff_props_file_content += '\n'
+        diff_props_save_file = open("diff.prop.save", "w")
+        diff_props_save_file.write(diff_props_file_content)
+        diff_props_save_file.close()
+        zh_diff_props_save_file = open("zh_diff.prop.save", "w")
+        zh_diff_props_save_file.write(zh_diff_props_file_content)
+        zh_diff_props_save_file.close()
         i += 1
     diff_props_file = open("diff.prop", "w")
     diff_props_file.write(diff_props_file_content)

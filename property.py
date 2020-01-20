@@ -20,8 +20,8 @@ class Properties:
                     self.properties[strs[0].strip()] = strs[1].strip()
 #        except Exception, e:
 #            raise e
-        except:
-            print("Error!")
+        except Exception as e:
+            print("Error: {}".format(str(e)))
         else:
             fopen.close()
 
